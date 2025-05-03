@@ -98,6 +98,10 @@ img {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
     border: 3px solid var(--accent-color);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 
@@ -331,7 +335,7 @@ img {
     .profile-img {
         width: 310px;
         height: 190px;
-        margin-bottom: 10px;
+        /* margin-bottom: 5px; */
     }
     
     .modal-content,
@@ -406,7 +410,7 @@ button:focus, a:focus, input:focus {
     z-index: 1;
     display: block;
     width: 300px; 
-    height: 190px; /* Adjust as needed */
+    height: 180px; /* Adjust as needed */
     border-radius: 10px;
   }
   
