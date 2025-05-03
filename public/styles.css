@@ -90,8 +90,8 @@ img {
 }
 
 .profile-img {
-    width: 300px;
-    height: 100px;
+    width: 350px;
+    height: 200px;
     border-radius: 18%;
     
     object-fit: cover;
@@ -99,7 +99,49 @@ img {
     transition: all 0.3s ease;
     border: 3px solid var(--accent-color);
 }
-
+.gradient-border {
+    position: relative;
+    padding: 5px; /* Border width */
+    border-radius: 12px;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #0F9E99, #3A7BFF, #ffffff, #3A7BFF,#0F9E99);
+    background-size: 400% 400%;
+    animation: gradientAnimation 2s ease infinite;
+    z-index: 0;
+    border-radius: 14px;
+  }
+  
+  .profile-img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 150px; /* Adjust as needed */
+    border-radius: 10px;
+  }
+  
+  /* Animation */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
 .profile-img:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
