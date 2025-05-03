@@ -405,7 +405,7 @@ button:focus, a:focus, input:focus {
     position: relative;
     z-index: 1;
     display: block;
-    width: 320px; 
+    width: 300px; 
     height: 190px; /* Adjust as needed */
     border-radius: 10px;
   }
