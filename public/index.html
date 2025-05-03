@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JCI India, Zone 18
+        Third Zone Governing Board Meeting – 2025
+        </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bg_music/bg_music.css">
+    <script defer src="https://vercel.live/_analytics/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="LOGO_4.jpg" >
+    
+
+    <link rel="stylesheet" href="bg_music.css">
+</head>
+<body>
+    <audio id="audio" src="bgm.mp3" autoplay unoptimized></audio>
+    <button id="music-btn">Play Music</button>
+    
+    
+
+
+
+    
+    <div class="container">
+        <img src="image/logo.jpg" alt="Profile Picture" class="profile-img">
+        <div class="title">JCI India, Zone 18</div>
+        <div class = "title" style="font-size: 30px; color: #562a2b;"> Third Zone Governing Board Meeting – 2025 </div>
+        <!-- <div class="subtitle_1" > "புற்றுநோய் வரும்முன் காக்கும் இலவச மருத்துவ முகாம்"</div> -->
+        <!-- <a href="https://fontmeme.com/tamil/"><img src="https://fontmeme.com/permalink/250317/c987414edc3ea9bb1c510b9b62a7531d.png" alt="tamil" border="0"  width="370" height="20" ></a> -->
+        <div class="subtitle">Venue :Lakshmi Mini Hall, Tirunelveli </div>
+        <div class="subtitle">Time:10.00 AM </div>
+        <div class="subtitle">Host:JCI Tirunelveli Spartans  </div>
+        <a href="#" class="btn" id="openModal"> 📖 E - Invitation </a>
+        <a href="#agenta" class = "btn" >Agenta</a>
+
+        
+        
+        
+        
+        <a href="#" class="btn" id="openContact">📞 Contact</a> <!-- Contact Button -->
+        
+       
+
+
+        <!-- Image Slider Inside Container -->
+        
+        <a href="https://www.google.com/maps/place/Laxmi+Mini+Hall/@8.6998958,77.7322955,870m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3b041319b779f95f:0xc86fa556640bdfd2!8m2!3d8.6998958!4d77.7322955!16s%2Fg%2F11stwn58rf?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D" class="btn">Location</a>
+
+        <div class="slider" id = agenta>
+            <h1>Event Agenta</h1>
+            
+            <div class="slides">
+                <img src="image/agenta_page-0001.jpg" class="slide" alt="Image 1">
+                <img src="image/agenta_page-0002.jpg" class="slide" alt="Image 2">
+                  
+
+                
+                
+            </div>
+            <!-- <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button> -->
+            
+            
+            
+
+            
+        </div>
+    
+    </div>
+    <!-- Modal for E-Invitation -->
+        <div id="modal" class="modal">
+            <div class="modal-content" style="height: 300px;">
+                <span class="close" id="closeModal">&times;</span>
+                <img src="image/invitation.jpg" alt="E-Invitation" class="modal-img_2">
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content" style="height: 300px;">
+                <span class="close" id="closeModal">&times;</span>
+                <img src="image/agenta_page-0002.jpg" alt="E-Invitation" class="modal-img_2">
+            </div>
+        </div>
+
+    <!-- Modal for Map -->
+    
+    
+
+
+    <!-- Modal for Donation -->
+<!-- Modal for Donation -->
+<!-- Modal for Donation -->
+    <div id="donationModal" class="modal">
+        <div class="modal-content" style="height: 450px;">
+            <span class="close" id="closeDonate">&times;</span>
+            <img src="donation.jpg" alt="To Donate this event" class="modal-img_2" style="height: 650;">
+            
+
+            <!-- UPI Payment Section -->
+            
+        </div>
+    </div>
+    
+    
+
+
+    <!-- Modal for Google Map -->
+    
+
+    <!-- Modal for Contact -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeContact">&times;</span>
+            <h2>📞 Contact Information</h2>
+
+            <!-- Click to Copy Phone Number -->
+            <p>
+                <strong>Phone:</strong> 
+                <a href="tel:9994862742" class="btn">+91 9994862742</a>
+                
+            </p>
+
+            <!-- Click to Open Mail App -->
+            
+
+            <!-- Success Message -->
+            <p id="copySuccess" style="color: green; display: none;">✅ Number copied!</p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <!-- <script src="bg_music/music.js"></script> -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7YRMR7PRP"></script>
+    <script>
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y7YRMR7PRP');
+    </script>
+    <script src="music.js"></script>
+    <SCRIpt>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".slide");
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            const slidesContainer = document.querySelector(".slides");
+            if (index >= totalSlides) slideIndex = 0;
+            else if (index < 0) slideIndex = totalSlides - 1;
+            else slideIndex = index;
+
+            slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(slideIndex - 1);
+        }
+
+        // Optional: auto-slide every 5 seconds
+        // setInterval(nextSlide, 5000);
+
+        document.addEventListener("DOMContentLoaded", () => {
+            showSlide(slideIndex);
+});
+
+    </SCRIpt>
+    
+</body>
+</html>

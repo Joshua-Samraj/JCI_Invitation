@@ -1,0 +1,384 @@
+:root {
+    /* Dark Theme Color Variables */
+    --primary-bg: #121212;
+    --secondary-bg: #1E1E1E;
+    --card-bg: #b8d8ba;
+    --accent-color: #0F9E99;
+    --text-primary: #000000;
+    --text-secondary: #3f3f3f;
+    --highlight: #3A7BFF;
+    --danger: #FF4D4D;
+    --success: #25D366;
+    --warning: #FFA726;
+    --border-color: #3D3D3D;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: center;
+    background-color: var(--primary-bg);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-primary);
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+}
+
+.icon_y {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.icon_i {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    vertical-align: middle;
+    filter: brightness(0.9);
+}
+
+img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+.upi-section {
+    text-align: center;
+    margin-top: 10px;
+    background: var(--secondary-bg);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.upi-qr {
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+    display: block;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.upi-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--success);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.upi-btn:hover {
+    background-color: #1da851;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.profile-img {
+    width: 300px;
+    height: 100px;
+    border-radius: 18%;
+    
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    border: 3px solid var(--accent-color);
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle_1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: var(--accent-color);
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: var(--text-primary);
+}
+
+.subtitle {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.btn {
+    display: block;
+    background: var(--highlight);
+    color: white;
+    padding: 12px 20px;
+    margin: 12px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: glow 1.5s infinite alternate;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(58, 123, 255, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(58, 123, 255, 0.7);
+    }
+}
+
+.btn_1 {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--danger);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: var(--highlight);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(58, 123, 255, 0.4);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    animation: fadeIn 0.4s ease-out;
+}
+.slider {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 12px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    background-color: rgba(0,0,0,0.5);
+    user-select: none;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+  
+.modal-content {
+    position: relative;
+    background: var(--card-bg);
+    margin: 10% auto;
+    padding: 25px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    animation: slideDown 0.4s ease-out;
+    border: 1px solid var(--border-color);
+}
+
+.slider {
+    position: relative;
+    width: 400px;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin: 15px 0;
+}
+
+/* ... (rest of your existing slider styles remain the same) ... */
+
+.modal-img_2 {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.modal-img_1 {
+    width: 50%;
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.close {
+    color: var(--text-secondary);
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+/* Copy Button Styles */
+.copy-btn {
+    background: var(--highlight);
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.copy-btn:hover {
+    background: #2a6bff;
+    transform: translateY(-1px);
+}
+
+.copy-text {
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--accent-color);
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+    :root {
+        font-size: 14px;
+    }
+    
+    .container {
+        padding: 15px;
+        border-radius: 10px;
+        /* height: 760px; */
+    }
+    .title {
+        margin-bottom: 15px;
+    }
+    .profile-img {
+        width: 310px;
+        height: 190px;
+        margin-bottom: 10px;
+    }
+    
+    .modal-content,
+    .modal-content_2 {
+        width: 90%;
+        margin-top: 20%;
+        padding: 15px;
+    }
+    
+    .upi-qr {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .btn {
+        padding: 10px 15px;
+        font-size: 14px;
+        background-color: #1e8ac0;
+    }
+}
+
+/* Additional Modern Touches */
+::selection {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+.slider {
+    position: relative;
+    width: 350px;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin: 15px 0;
+}
+
+/* Modern focus styles */
+button:focus, a:focus, input:focus {
+    outline: 2px solid var(--highlight);
+    outline-offset: 2px;
+}
